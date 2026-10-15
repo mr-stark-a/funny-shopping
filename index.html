@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funny Shopping | Curated Viral Finds & Gadgets</title>
+  <meta name="description" content="Shop viral TikTok & Amazon finds tested in real life. Honest reviews, smart gadgets, travel essentials, and daily lifestyle favorites.">
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #FF6B8B;
+      --primary-dark: #E04D70;
+      --secondary: #FFD166;
+      --accent-purple: #9D4EDD;
+      --accent-lavender: #E8D7FF;
+      --accent-green: #06D6A0;
+      --bg-gradient: linear-gradient(135deg, #FFF5F7 0%, #FFF9EB 50%, #F5F0FF 100%);
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-border: rgba(255, 255, 255, 0.8);
+      --card-shadow: 0 12px 32px rgba(157, 78, 221, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+      --text-main: #2D223B;
+      --text-muted: #6B5B7B;
+      --amazon-color: #FF9900;
+      --amazon-dark: #E68A00;
+      --ali-color: #FF4747;
+      --ali-dark: #D93636;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+      overflow-x: hidden;
+    }
+
+    /* Outer Wrapper - Optimized for Mobile First */
+    .container {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+      padding-bottom: 60px;
+    }
+
+    /* Header Profile Card */
+    .header-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px 22px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #FF6B8B, #FFD166, #C77DFF, #06D6A0);
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 104px;
+      height: 104px;
+      margin: 0 auto 14px;
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(255, 107, 139, 0.35);
+      border: 4px solid #FFFFFF;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .avatar-wrapper:hover .avatar-img {
+      transform: scale(1.06) rotate(3deg);
+    }
+
+    .verified-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      background: #06D6A0;
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      border: 2.5px solid white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .channel-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #2D1A45;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .channel-tagline {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 16px;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Social Pills */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: #F4EEFB;
+      color: #4A3366;
+    }
+
+    .social-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(157, 78, 221, 0.2);
+    }
+
+    .social-pill.youtube:hover { background: #FF0000; color: white; }
+    .social-pill.tiktok:hover { background: #000000; color: white; }
+    .social-pill.instagram:hover { background: linear-gradient(45deg, #F09433, #BC1888); color: white; }
+
+    /* Sticky Search & Filter Bar */
+    .controls-wrapper {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      box-shadow: 0 8px 24px rgba(100, 60, 150, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid #E6DCF2;
+      background: #FAF8FD;
+      font-family: inherit;
+      font-size: 14.5px;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(255, 107, 139, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #9D8BAE;
+    }
+
+    /* Category Filter Tabs */
+    .filter-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+
+    .filter-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filter-btn {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid #EAE0F5;
+      background: #FFFFFF;
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--text-main);
+      color: #FFFFFF;
+      border-color: var(--text-main);
+    }
+
+    /* Banner Card Notice */
+    .hero-banner {
+      width: 100%;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid rgba(255,255,255,0.8);
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Product Cards Section */
+    .items-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(157, 78, 221, 0.12);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .item-badge-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .item-number {
+      background: linear-gradient(135deg, #FF6B8B, #FF8E53);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 13.5px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 2px 8px rgba(255, 107, 139, 0.35);
+    }
+
+    .category-tag {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent-purple);
+      background: #F4EEFB;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+    }
+
+    .views-badge {
+      font-size: 12px;
+      font-weight: 600;
+      color: #058866;
+      background: #E6FBF5;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .product-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1E122C;
+      line-height: 1.35;
+    }
+
+    .product-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .perks-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      margin-top: -2px;
+    }
+
+    .perk-tag {
+      font-size: 12px;
+      background: #FAF6FD;
+      color: #554468;
+      border: 1px solid #ECE3F5;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Buttons Row */
+    .button-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .buy-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: var(--radius-pill);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .buy-btn.amazon {
+      background: linear-gradient(135deg, #FFA41C, #FF8E00);
+      color: #111111;
+      box-shadow: 0 4px 14px rgba(255, 142, 0, 0.25);
+    }
+
+    .buy-btn.amazon:hover {
+      background: linear-gradient(135deg, #FFB13B, #FF9900);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(255, 142, 0, 0.35);
+    }
+
+    .buy-btn.aliexpress {
+      background: linear-gradient(135deg, #FF4747, #E02828);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(255, 71, 71, 0.25);
+    }
+
+    .buy-btn.aliexpress:hover {
+      background: linear-gradient(135deg, #FF5C5C, #ED3232);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(255, 71, 71, 0.35);
+    }
+
+    /* Copy Link Secondary Button */
+    .share-row {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-top: 4px;
+      border-top: 1px dashed #EDE5F5;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      color: #8C78A5;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: color 0.2s ease;
+    }
+
+    .copy-btn:hover {
+      color: var(--primary);
+    }
+
+    /* Compliance Footer (Mandatory for Amazon & FTC) */
+    .compliance-footer {
+      background: rgba(255, 255, 255, 0.85);
+      border-top: 1px solid #EFE8F7;
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      margin-top: 36px;
+      font-size: 12px;
+      color: #7D6F8D;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .disclosure-box {
+      background: #F9F6FC;
+      border: 1px solid #EBE2F5;
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .disclosure-title {
+      font-weight: 700;
+      color: #3C2E4C;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+
+    .footer-links a {
+      color: var(--accent-purple);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #2D1A45;
+      color: white;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      font-size: 13.5px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 1000;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Mobile Tweaks */
+    @media (max-width: 480px) {
+      .button-group {
+        grid-template-columns: 1fr;
+      }
+      .channel-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Profile & Header Section -->
+    <header class="header-card">
+      <div class="avatar-wrapper">
+        <img src="logo.jpg" alt="Funny Shopping Mascot" class="avatar-img">
+        <span class="verified-badge" title="Verified Creator">✓</span>
+      </div>
+
+      <h1 class="channel-title">Funny Shopping ✨</h1>
+      <p class="channel-tagline">
+        We test viral TikTok & Amazon finds so you don't waste your money! Real life tests, smart gadgets & everyday life hacks.
+      </p>
+
+      <div class="social-links">
+        <a href="https://youtube.com/@FunnyShopping" target="_blank" rel="noopener" class="social-pill youtube">
+          <span>▶</span> YouTube
+        </a>
+        <a href="https://tiktok.com/@funnyshopping" target="_blank" rel="noopener" class="social-pill tiktok">
+          <span>🎵</span> TikTok
+        </a>
+        <a href="https://instagram.com/funnyshopping" target="_blank" rel="noopener" class="social-pill instagram">
+          <span>📸</span> Instagram
+        </a>
+      </div>
+    </header>
+
+    <!-- Visual Channel Banner -->
+    <div class="hero-banner">
+      <img src="banner.jpg" alt="Funny Shopping Banner">
+    </div>
+
+    <!-- Search & Category Filters (Sticky Bar) -->
+    <div class="controls-wrapper">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search item # or name (e.g. #1, backpack, ring)...">
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">🔥 All Finds</button>
+        <button class="filter-btn" data-filter="travel">✈️ Travel</button>
+        <button class="filter-btn" data-filter="smart-home">🏠 Smart Home</button>
+        <button class="filter-btn" data-filter="tech">⚡ Tech & Desk</button>
+        <button class="filter-btn" data-filter="wellness">💆 Wellness</button>
+        <button class="filter-btn" data-filter="pet">🐱 Pet-Tech</button>
+      </div>
+    </div>
+
+    <!-- Product Cards Grid -->
+    <main class="items-grid" id="itemsGrid">
+
+      <!-- Item #1 -->
+      <article class="product-card" data-category="travel" data-keywords="backpack vacuum airback carry on travel compression luggage bag #1">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #1</span>
+            <span class="category-tag">Travel</span>
+          </div>
+          <span class="views-badge">🔥 40M+ Views</span>
+        </div>
+        <div>
+          <h2 class="product-title">Airback Vacuum Travel Backpack</h2>
+          <p class="product-desc">Built-in compression valve shrinks 8 days of clothes into airline personal item size. Saves up to $100 on baggage fees!</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ Air-tight valve</li>
+          <li class="perk-tag">✓ Fits personal item sizer</li>
+          <li class="perk-tag">✓ Water-resistant</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=Vacuum+Compression+Travel+Backpack" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=Vacuum+Compression+Backpack+Travel+Pump" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#1 Airback Vacuum Backpack', 'https://www.amazon.com/s?k=Vacuum+Compression+Travel+Backpack')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #2 -->
+      <article class="product-card" data-category="tech" data-keywords="smart ring ringconn sleep tracker fitness health hrv titanium galaxy ring #2">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #2</span>
+            <span class="category-tag">Wearables</span>
+          </div>
+          <span class="views-badge">✨ 4M+ Views</span>
+        </div>
+        <div>
+          <h2 class="product-title">Titanium Smart Ring (Sleep & HRV)</h2>
+          <p class="product-desc">Medical-grade health & sleep biometric tracking without irritating screens or paid monthly app subscriptions.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ 0.00$ Monthly Fee</li>
+          <li class="perk-tag">✓ 7-Day Battery Life</li>
+          <li class="perk-tag">✓ Waterproof 5ATM</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=RingConn+Gen+2+Smart+Ring" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=Colmi+R02+Smart+Ring" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#2 Smart Ring', 'https://www.amazon.com/s?k=RingConn+Gen+2+Smart+Ring')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #3 -->
+      <article class="product-card" data-category="tech" data-keywords="ai auto tracking phone holder hohem gimbal stabilizer camera mount #3">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #3</span>
+            <span class="category-tag">Creator Tech</span>
+          </div>
+          <span class="views-badge">🎥 5M+ Views</span>
+        </div>
+        <div>
+          <h2 class="product-title">AI Auto-Tracking 360° Phone Mount</h2>
+          <p class="product-desc">Personal robot cameraman with built-in optical sensor. Follows your face and body smoothly without any app or Bluetooth.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ No App Needed</li>
+          <li class="perk-tag">✓ Gesture Controls</li>
+          <li class="perk-tag">✓ 360° Smooth Pan</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=Hohem+iSteady+V3+AI+tracking" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=AI+Auto+Tracking+Phone+Holder+360" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#3 AI Auto-Tracker', 'https://www.amazon.com/s?k=Hohem+iSteady+V3+AI+tracking')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #4 -->
+      <article class="product-card" data-category="pet" data-keywords="petlibro rfid automatic feeder cat dog smart feeder camera pet #4">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #4</span>
+            <span class="category-tag">Pet-Tech</span>
+          </div>
+          <span class="views-badge">🐾 Viral Hit</span>
+        </div>
+        <div>
+          <h2 class="product-title">PETLIBRO RFID Smart Pet Feeder</h2>
+          <p class="product-desc">Collar-sensor selective feeder with 1080p camera. Stops aggressive pets from stealing each other's specialized food.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ RFID Collar Tag</li>
+          <li class="perk-tag">✓ Two-Way Audio & Cam</li>
+          <li class="perk-tag">✓ Anti-Clog Motor</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=PETLIBRO+RFID+Automatic+Pet+Feeder" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=Wireless+Pump+Pet+Water+Fountain+UV" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#4 RFID Pet Feeder', 'https://www.amazon.com/s?k=PETLIBRO+RFID+Automatic+Pet+Feeder')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #5 -->
+      <article class="product-card" data-category="tech" data-keywords="wooting rapid trigger keyboard drunkdeer hall effect magnetic switch gaming #5">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #5</span>
+            <span class="category-tag">Gaming / Tech</span>
+          </div>
+          <span class="views-badge">⚡ Esports Standard</span>
+        </div>
+        <div>
+          <h2 class="product-title">Hall-Effect Rapid Trigger Keyboard</h2>
+          <p class="product-desc">Magnetic switches with 0.1mm dynamic reset. Instant stop-and-shoot accuracy that gives an unfair advantage in FPS games.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ 0.1mm Rapid Trigger</li>
+          <li class="perk-tag">✓ Zero Debounce Delay</li>
+          <li class="perk-tag">✓ Hot-swappable</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=DrunkDeer+A75+Rapid+Trigger+Keyboard" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=Magnetic+Switch+Keyboard+Rapid+Trigger" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#5 Rapid Trigger Keyboard', 'https://www.amazon.com/s?k=DrunkDeer+A75+Rapid+Trigger+Keyboard')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #6 -->
+      <article class="product-card" data-category="wellness" data-keywords="red light therapy mask led mask skin care omnilux anti aging collagen #6">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #6</span>
+            <span class="category-tag">Skincare</span>
+          </div>
+          <span class="views-badge">🌟 800M+ Views</span>
+        </div>
+        <div>
+          <h2 class="product-title">Medical-Grade Red Light LED Mask</h2>
+          <p class="product-desc">Clinical 660nm deep red and 850nm near-infrared wavelengths proven to stimulate collagen and reduce wrinkles at home.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ Dual 660nm & 850nm</li>
+          <li class="perk-tag">✓ Flexible Silicone</li>
+          <li class="perk-tag">✓ 10-Min Auto Timer</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=Red+Light+Therapy+Face+Mask+FDA+cleared" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=Silicone+LED+Face+Mask+Phototherapy" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#6 Red Light LED Mask', 'https://www.amazon.com/s?k=Red+Light+Therapy+Face+Mask+FDA+cleared')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #7 -->
+      <article class="product-card" data-category="smart-home" data-keywords="ecoflow river 2 lifepo4 portable power station battery generator solar #7">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #7</span>
+            <span class="category-tag">Power & Outdoor</span>
+          </div>
+          <span class="views-badge">⚡ Long-Life LFP</span>
+        </div>
+        <div>
+          <h2 class="product-title">EcoFlow LiFePO4 Portable Power Station</h2>
+          <p class="product-desc">3,000+ battery charge cycles (10 years daily use) and 70-minute lightning recharge. Powers laptops, blenders, and CPAP machines.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ 3000+ Cycles (LiFePO4)</li>
+          <li class="perk-tag">✓ 0-100% in 70 Mins</li>
+          <li class="perk-tag">✓ EPS Auto-Switchover</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=EcoFlow+RIVER+2+Pro+LiFePO4" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=LiFePO4+Portable+Power+Station+outdoor" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#7 EcoFlow Power Station', 'https://www.amazon.com/s?k=EcoFlow+RIVER+2+Pro+LiFePO4')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #8 -->
+      <article class="product-card" data-category="wellness" data-keywords="renpho air compression leg massager boots circulation lymphatic drainage #8">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #8</span>
+            <span class="category-tag">Recovery</span>
+          </div>
+          <span class="views-badge">💆 Daily Relief</span>
+        </div>
+        <div>
+          <h2 class="product-title">Pneumatic Air Compression Leg Boots</h2>
+          <p class="product-desc">Sequential air chambers massage calves, feet, and thighs. Melts away leg swelling, varicose soreness, and long-day standing fatigue.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ 3 Modes & Intensities</li>
+          <li class="perk-tag">✓ Heated Knee Section</li>
+          <li class="perk-tag">✓ Auto Shut-Off</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=RENPHO+Leg+Massager+with+Air+Compression" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=Air+Compression+Leg+Massager+Circulation" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#8 Leg Compression Boots', 'https://www.amazon.com/s?k=RENPHO+Leg+Massager+with+Air+Compression')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #9 -->
+      <article class="product-card" data-category="smart-home" data-keywords="aqara u200 matter thread smart lock apple home key fingerprint door #9">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #9</span>
+            <span class="category-tag">Smart Home</span>
+          </div>
+          <span class="views-badge">🔒 Matter Standard</span>
+        </div>
+        <div>
+          <h2 class="product-title">Aqara U200 Matter Smart Lock</h2>
+          <p class="product-desc">Unlock with an iPhone or Apple Watch tap using Apple Home Key. Retrofit install over existing deadbolts in 10 minutes.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ Apple Home Key (NFC)</li>
+          <li class="perk-tag">✓ Biometric Fingerprint</li>
+          <li class="perk-tag">✓ Matter over Thread</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=Aqara+Smart+Lock+U200+Matter" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=Tuya+Smart+Cylinder+Lock+Biometric" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#9 Aqara Smart Lock', 'https://www.amazon.com/s?k=Aqara+Smart+Lock+U200+Matter')">🔗 Copy link</button>
+        </div>
+      </article>
+
+      <!-- Item #10 -->
+      <article class="product-card" data-category="wellness" data-keywords="osteo cervical pillow contour memory foam neck pain orthopedic sleep #10">
+        <div class="card-top">
+          <div class="item-badge-group">
+            <span class="item-number">Item #10</span>
+            <span class="category-tag">Better Sleep</span>
+          </div>
+          <span class="views-badge">💤 Ergonomic</span>
+        </div>
+        <div>
+          <h2 class="product-title">Osteo Cervical Contour Memory Pillow</h2>
+          <p class="product-desc">Cradles your neck in natural cervical alignment. Eliminates morning neck stiffness and tension headaches from desk posture.</p>
+        </div>
+        <ul class="perks-list">
+          <li class="perk-tag">✓ 3D Contoured Hollow</li>
+          <li class="perk-tag">✓ Breathable Cooling Cover</li>
+          <li class="perk-tag">✓ Side & Back Sleepers</li>
+        </ul>
+        <div class="button-group">
+          <a href="https://www.amazon.com/s?k=Osteo+Cervical+Pillow+Contour+Memory+Foam" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>
+          <a href="https://www.aliexpress.com/wholesale?SearchText=Cervical+Memory+Foam+Pillow+Orthopedic" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>
+        </div>
+        <div class="share-row">
+          <button class="copy-btn" onclick="copyLink('#10 Contour Memory Pillow', 'https://www.amazon.com/s?k=Osteo+Cervical+Pillow+Contour+Memory+Foam')">🔗 Copy link</button>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- FTC & Amazon Associates Compliance Footer -->
+    <footer class="compliance-footer">
+      <div class="disclosure-box">
+        <div class="disclosure-title">⚖️ FTC & Affiliate Partner Disclosure</div>
+        <p>
+          <strong>Funny Shopping</strong> is an independent review, curation, and consumer guide platform. As an Amazon Associate and AliExpress Affiliate partner, we earn from qualifying purchases made through links on this page at <strong>absolutely no additional cost to you</strong>.
+        </p>
+        <p style="margin-top: 6px;">
+          Product prices, coupons, and availability are accurate as of the date/time indicated and are subject to change by the respective retailers. Any price and availability information displayed on Amazon or AliExpress at the time of purchase will apply.
+        </p>
+      </div>
+
+      <p>© 2026 Funny Shopping. All rights reserved.</p>
+      <p style="margin-top: 4px;">Contact & Partnerships: <a href="mailto:funnyshopping.contact@gmail.com" style="color: inherit; text-decoration: underline;">funnyshopping.contact@gmail.com</a></p>
+      
+      <div class="footer-links">
+        <a href="#itemsGrid">Top of Page</a>
+        <a href="mailto:funnyshopping.contact@gmail.com">Report Broken Link</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast Element -->
+  <div class="toast" id="toast">Link copied to clipboard! ✨</div>
+
+  <script>
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const items = document.querySelectorAll('.product-card');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    let currentCategory = 'all';
+
+    function filterItems() {
+      const query = searchInput.value.toLowerCase().trim();
+
+      items.forEach(card => {
+        const keywords = card.getAttribute('data-keywords').toLowerCase();
+        const category = card.getAttribute('data-category');
+        const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+        const matchesSearch = query === '' || keywords.includes(query);
+
+        if (matchesCategory && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterItems);
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.getAttribute('data-filter');
+        filterItems();
+      });
+    });
+
+    // Copy link helper with toast
+    function copyLink(title, url) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          showToast(`Copied ${title} link!`);
+        });
+      } else {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = url;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        showToast(`Copied ${title} link!`);
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2400);
+    }
+  </script>
+</body>
+</html>
