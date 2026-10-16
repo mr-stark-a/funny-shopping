@@ -1,0 +1,171 @@
+{
+  "settings": {
+    "title": "Funny Shopping ✨",
+    "tagline": "We test viral TikTok & Amazon finds so you don't waste your money! Real life tests, smart gadgets & everyday life hacks.",
+    "youtube_url": "https://youtube.com/@FunnyShopping",
+    "tiktok_url": "https://tiktok.com/@funnyshopping",
+    "instagram_url": "https://instagram.com/funnyshopping"
+  },
+  "items": [
+    {
+      "item_number": "Item #1",
+      "title": "Airback Vacuum Travel Backpack",
+      "category": "travel",
+      "category_label": "Travel",
+      "views_badge": "🔥 40M+ Views",
+      "desc": "Built-in compression valve shrinks 8 days of clothes into airline personal item size. Saves up to $100 on baggage fees!",
+      "perks": [
+        "Air-tight valve",
+        "Fits personal item sizer",
+        "Water-resistant"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=Vacuum+Compression+Travel+Backpack",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=Vacuum+Compression+Backpack+Travel+Pump",
+      "keywords": "backpack vacuum airback carry on travel compression luggage bag #1"
+    },
+    {
+      "item_number": "Item #2",
+      "title": "Titanium Smart Ring (Sleep & HRV)",
+      "category": "tech",
+      "category_label": "Wearables",
+      "views_badge": "✨ 4M+ Views",
+      "desc": "Medical-grade health & sleep biometric tracking without irritating screens or paid monthly app subscriptions.",
+      "perks": [
+        "0.00$ Monthly Fee",
+        "7-Day Battery Life",
+        "Waterproof 5ATM"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=RingConn+Gen+2+Smart+Ring",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=Colmi+R02+Smart+Ring",
+      "keywords": "smart ring ringconn sleep tracker fitness health hrv titanium galaxy ring #2"
+    },
+    {
+      "item_number": "Item #3",
+      "title": "AI Auto-Tracking 360° Phone Mount",
+      "category": "tech",
+      "category_label": "Creator Tech",
+      "views_badge": "🎥 5M+ Views",
+      "desc": "Personal robot cameraman with built-in optical sensor. Follows your face and body smoothly without any app or Bluetooth.",
+      "perks": [
+        "No App Needed",
+        "Gesture Controls",
+        "360° Smooth Pan"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=Hohem+iSteady+V3+AI+tracking",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=AI+Auto+Tracking+Phone+Holder+360",
+      "keywords": "ai auto tracking phone holder hohem gimbal stabilizer camera mount #3"
+    },
+    {
+      "item_number": "Item #4",
+      "title": "PETLIBRO RFID Smart Pet Feeder",
+      "category": "pet",
+      "category_label": "Pet-Tech",
+      "views_badge": "🐾 Viral Hit",
+      "desc": "Collar-sensor selective feeder with 1080p camera. Stops aggressive pets from stealing each other's specialized food.",
+      "perks": [
+        "RFID Collar Tag",
+        "Two-Way Audio & Cam",
+        "Anti-Clog Motor"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=PETLIBRO+RFID+Automatic+Pet+Feeder",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=Wireless+Pump+Pet+Water+Fountain+UV",
+      "keywords": "petlibro rfid automatic feeder cat dog smart feeder camera pet #4"
+    },
+    {
+      "item_number": "Item #5",
+      "title": "Hall-Effect Rapid Trigger Keyboard",
+      "category": "tech",
+      "category_label": "Gaming / Tech",
+      "views_badge": "⚡ Esports Standard",
+      "desc": "Magnetic switches with 0.1mm dynamic reset. Instant stop-and-shoot accuracy that gives an unfair advantage in FPS games.",
+      "perks": [
+        "0.1mm Rapid Trigger",
+        "Zero Debounce Delay",
+        "Hot-swappable"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=DrunkDeer+A75+Rapid+Trigger+Keyboard",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=Magnetic+Switch+Keyboard+Rapid+Trigger",
+      "keywords": "wooting rapid trigger keyboard drunkdeer hall effect magnetic switch gaming #5"
+    },
+    {
+      "item_number": "Item #6",
+      "title": "Medical-Grade Red Light LED Mask",
+      "category": "wellness",
+      "category_label": "Skincare",
+      "views_badge": "🌟 800M+ Views",
+      "desc": "Clinical 660nm deep red and 850nm near-infrared wavelengths proven to stimulate collagen and reduce wrinkles at home.",
+      "perks": [
+        "Dual 660nm & 850nm",
+        "Flexible Silicone",
+        "10-Min Auto Timer"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=Red+Light+Therapy+Face+Mask+FDA+cleared",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=Silicone+LED+Face+Mask+Phototherapy",
+      "keywords": "red light therapy mask led mask skin care omnilux anti aging collagen #6"
+    },
+    {
+      "item_number": "Item #7",
+      "title": "EcoFlow LiFePO4 Portable Power Station",
+      "category": "smart-home",
+      "category_label": "Power & Outdoor",
+      "views_badge": "⚡ Long-Life LFP",
+      "desc": "3,000+ battery charge cycles (10 years daily use) and 70-minute lightning recharge. Powers laptops, blenders, and CPAP machines.",
+      "perks": [
+        "3000+ Cycles (LiFePO4)",
+        "0-100% in 70 Mins",
+        "EPS Auto-Switchover"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=EcoFlow+RIVER+2+Pro+LiFePO4",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=LiFePO4+Portable+Power+Station+outdoor",
+      "keywords": "ecoflow river 2 lifepo4 portable power station battery generator solar #7"
+    },
+    {
+      "item_number": "Item #8",
+      "title": "Pneumatic Air Compression Leg Boots",
+      "category": "wellness",
+      "category_label": "Recovery",
+      "views_badge": "💆 Daily Relief",
+      "desc": "Sequential air chambers massage calves, feet, and thighs. Melts away leg swelling, varicose soreness, and long-day standing fatigue.",
+      "perks": [
+        "3 Modes & Intensities",
+        "Heated Knee Section",
+        "Auto Shut-Off"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=RENPHO+Leg+Massager+with+Air+Compression",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=Air+Compression+Leg+Massager+Circulation",
+      "keywords": "renpho air compression leg massager boots circulation lymphatic drainage #8"
+    },
+    {
+      "item_number": "Item #9",
+      "title": "Aqara U200 Matter Smart Lock",
+      "category": "smart-home",
+      "category_label": "Smart Home",
+      "views_badge": "🔒 Matter Standard",
+      "desc": "Unlock with an iPhone or Apple Watch tap using Apple Home Key. Retrofit install over existing deadbolts in 10 minutes.",
+      "perks": [
+        "Apple Home Key (NFC)",
+        "Biometric Fingerprint",
+        "Matter over Thread"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=Aqara+Smart+Lock+U200+Matter",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=Tuya+Smart+Cylinder+Lock+Biometric",
+      "keywords": "aqara u200 matter thread smart lock apple home key fingerprint door #9"
+    },
+    {
+      "item_number": "Item #10",
+      "title": "Osteo Cervical Contour Memory Pillow",
+      "category": "wellness",
+      "category_label": "Better Sleep",
+      "views_badge": "💤 Ergonomic",
+      "desc": "Cradles your neck in natural cervical alignment. Eliminates morning neck stiffness and tension headaches from desk posture.",
+      "perks": [
+        "3D Contoured Hollow",
+        "Breathable Cooling Cover",
+        "Side & Back Sleepers"
+      ],
+      "amazon_link": "https://www.amazon.com/s?k=Osteo+Cervical+Pillow+Contour+Memory+Foam",
+      "ali_link": "https://www.aliexpress.com/wholesale?SearchText=Cervical+Memory+Foam+Pillow+Orthopedic",
+      "keywords": "osteo cervical pillow contour memory foam neck pain orthopedic sleep #10"
+    }
+  ]
+}

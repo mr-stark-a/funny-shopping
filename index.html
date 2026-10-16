@@ -556,19 +556,19 @@
         <span class="verified-badge" title="Verified Creator">✓</span>
       </div>
 
-      <h1 class="channel-title">Funny Shopping ✨</h1>
-      <p class="channel-tagline">
+      <h1 class="channel-title" id="channelTitle">Funny Shopping ✨</h1>
+      <p class="channel-tagline" id="channelTagline">
         We test viral TikTok & Amazon finds so you don't waste your money! Real life tests, smart gadgets & everyday life hacks.
       </p>
 
-      <div class="social-links">
-        <a href="https://youtube.com/@FunnyShopping" target="_blank" rel="noopener" class="social-pill youtube">
+      <div class="social-links" id="socialLinks">
+        <a id="socialYoutube" href="https://youtube.com/@FunnyShopping" target="_blank" rel="noopener" class="social-pill youtube">
           <span>▶</span> YouTube
         </a>
-        <a href="https://tiktok.com/@funnyshopping" target="_blank" rel="noopener" class="social-pill tiktok">
+        <a id="socialTiktok" href="https://tiktok.com/@funnyshopping" target="_blank" rel="noopener" class="social-pill tiktok">
           <span>🎵</span> TikTok
         </a>
-        <a href="https://instagram.com/funnyshopping" target="_blank" rel="noopener" class="social-pill instagram">
+        <a id="socialInstagram" href="https://instagram.com/funnyshopping" target="_blank" rel="noopener" class="social-pill instagram">
           <span>📸</span> Instagram
         </a>
       </div>
@@ -929,6 +929,7 @@
       <div class="footer-links">
         <a href="#itemsGrid">Top of Page</a>
         <a href="mailto:funnyshopping.contact@gmail.com">Report Broken Link</a>
+        <a href="./admin/" target="_blank" style="opacity: 0.8; font-weight: 700;">⚙️ Visual CMS</a>
       </div>
     </footer>
 
@@ -938,17 +939,26 @@
   <div class="toast" id="toast">Link copied to clipboard! ✨</div>
 
   <script>
-    // Search functionality
     const searchInput = document.getElementById('searchInput');
-    const items = document.querySelectorAll('.product-card');
     const filterBtns = document.querySelectorAll('.filter-btn');
     let currentCategory = 'all';
 
-    function filterItems() {
-      const query = searchInput.value.toLowerCase().trim();
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
 
-      items.forEach(card => {
-        const keywords = card.getAttribute('data-keywords').toLowerCase();
+    function filterItems() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      const allCards = document.querySelectorAll('.product-card');
+
+      allCards.forEach(card => {
+        const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
         const category = card.getAttribute('data-category');
         const matchesCategory = (currentCategory === 'all' || category === currentCategory);
         const matchesSearch = query === '' || keywords.includes(query);
@@ -971,6 +981,98 @@
         filterItems();
       });
     });
+
+    function renderProducts(items) {
+      const grid = document.getElementById('itemsGrid');
+      if (!grid || !Array.isArray(items) || items.length === 0) return;
+
+      grid.innerHTML = items.map(item => {
+        const perks = Array.isArray(item.perks) ? item.perks : [];
+        const perksHtml = perks.map(p => {
+          const raw = String(p || '').trim();
+          const text = raw.startsWith('✓') ? raw : `✓ ${raw}`;
+          return `<li class="perk-tag">${escapeHtml(text)}</li>`;
+        }).join('');
+
+        const amazonBtn = item.amazon_link ? `
+          <a href="${escapeHtml(item.amazon_link)}" target="_blank" rel="nofollow sponsored noopener" class="buy-btn amazon">
+            <span>🛒</span> Buy on Amazon
+          </a>` : '';
+
+        const aliBtn = item.ali_link ? `
+          <a href="${escapeHtml(item.ali_link)}" target="_blank" rel="nofollow sponsored noopener" class="buy-btn aliexpress">
+            <span>⚡</span> Direct OEM on Ali
+          </a>` : '';
+
+        const shareUrl = item.amazon_link || item.ali_link || window.location.href;
+        const shareTitle = `${item.item_number || ''} ${item.title || ''}`.trim();
+        const keywords = `${item.keywords || ''} ${item.title || ''} ${item.item_number || ''}`.toLowerCase();
+
+        return `
+          <article class="product-card" data-category="${escapeHtml(item.category || 'all')}" data-keywords="${escapeHtml(keywords)}">
+            <div class="card-top">
+              <div class="item-badge-group">
+                <span class="item-number">${escapeHtml(item.item_number || '')}</span>
+                <span class="category-tag">${escapeHtml(item.category_label || item.category || 'Find')}</span>
+              </div>
+              ${item.views_badge ? `<span class="views-badge">${escapeHtml(item.views_badge)}</span>` : ''}
+            </div>
+            <div>
+              <h2 class="product-title">${escapeHtml(item.title || '')}</h2>
+              <p class="product-desc">${escapeHtml(item.desc || '')}</p>
+            </div>
+            ${perksHtml ? `<ul class="perks-list">${perksHtml}</ul>` : ''}
+            <div class="button-group">
+              ${amazonBtn}
+              ${aliBtn}
+            </div>
+            <div class="share-row">
+              <button class="copy-btn" onclick="copyLink('${escapeHtml(shareTitle)}', '${escapeHtml(shareUrl)}')">🔗 Copy link</button>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      filterItems();
+    }
+
+    // Dynamic fetch from products.json (cache-busted for instant CMS updates)
+    fetch('products.json?v=' + Date.now())
+      .then(res => {
+        if (!res.ok) throw new Error('Status: ' + res.status);
+        return res.json();
+      })
+      .then(data => {
+        if (data.settings) {
+          if (data.settings.title) {
+            const el = document.getElementById('channelTitle');
+            if (el) el.textContent = data.settings.title;
+          }
+          if (data.settings.tagline) {
+            const el = document.getElementById('channelTagline');
+            if (el) el.textContent = data.settings.tagline;
+          }
+          if (data.settings.youtube_url) {
+            const el = document.getElementById('socialYoutube');
+            if (el) el.href = data.settings.youtube_url;
+          }
+          if (data.settings.tiktok_url) {
+            const el = document.getElementById('socialTiktok');
+            if (el) el.href = data.settings.tiktok_url;
+          }
+          if (data.settings.instagram_url) {
+            const el = document.getElementById('socialInstagram');
+            if (el) el.href = data.settings.instagram_url;
+          }
+        }
+        if (data.items && Array.isArray(data.items)) {
+          renderProducts(data.items);
+        }
+      })
+      .catch(err => {
+        // Fallback: static HTML already in place
+        console.log('Using static pre-rendered products list:', err);
+      });
 
     // Copy link helper with toast
     function copyLink(title, url) {

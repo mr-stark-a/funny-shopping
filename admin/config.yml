@@ -1,0 +1,56 @@
+backend:
+  name: github
+  repo: mr-stark-a/funny-shopping
+  branch: main
+  auth_methods: [token]
+
+site_url: https://mr-stark-a.github.io/funny-shopping/
+logo_url: ../logo.jpg
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "storefront"
+    label: "Storefront"
+    files:
+      - name: "content"
+        label: "Storefront Settings & Viral Finds"
+        file: "products.json"
+        format: "json"
+        fields:
+          - label: "Channel Info & Socials"
+            name: "settings"
+            widget: "object"
+            fields:
+              - { label: "Channel Title", name: "title", widget: "string", default: "Funny Shopping ✨" }
+              - { label: "Tagline", name: "tagline", widget: "text" }
+              - { label: "YouTube Link", name: "youtube_url", widget: "string" }
+              - { label: "TikTok Link", name: "tiktok_url", widget: "string" }
+              - { label: "Instagram Link", name: "instagram_url", widget: "string" }
+          - label: "Product Cards (Viral Finds)"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.item_number}} - {{fields.title}}"
+            fields:
+              - { label: "Item Number", name: "item_number", widget: "string", default: "Item #1" }
+              - { label: "Product Title", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "✈️ Travel", value: "travel" }
+                  - { label: "🏠 Smart Home", value: "smart-home" }
+                  - { label: "⚡ Tech & Desk", value: "tech" }
+                  - { label: "💆 Wellness", value: "wellness" }
+                  - { label: "🐱 Pet-Tech", value: "pet" }
+              - { label: "Category Label", name: "category_label", widget: "string", default: "Travel" }
+              - { label: "Views Badge", name: "views_badge", widget: "string", default: "🔥 10M+ Views" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - label: "Perks & Features"
+                name: "perks"
+                widget: "list"
+                field: { label: "Feature", name: "perk", widget: "string" }
+              - { label: "Amazon Link (Affiliate)", name: "amazon_link", widget: "string" }
+              - { label: "AliExpress Link (Affiliate)", name: "ali_link", widget: "string" }
+              - { label: "Search Keywords", name: "keywords", widget: "string" }
