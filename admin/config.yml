@@ -35,6 +35,7 @@ collections:
             fields:
               - { label: "Item Number", name: "item_number", widget: "string", default: "Item #1" }
               - { label: "Product Title", name: "title", widget: "string" }
+              - { label: "Product Photo", name: "image", widget: "image", required: false, choose_url: true }
               - label: "Category"
                 name: "category"
                 widget: "select"

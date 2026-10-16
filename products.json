@@ -10,6 +10,7 @@
     {
       "item_number": "Item #1",
       "title": "Airback Vacuum Travel Backpack",
+      "image": "",
       "category": "travel",
       "category_label": "Travel",
       "views_badge": "🔥 40M+ Views",
@@ -26,6 +27,7 @@
     {
       "item_number": "Item #2",
       "title": "Titanium Smart Ring (Sleep & HRV)",
+      "image": "images/ringconn.jpg",
       "category": "tech",
       "category_label": "Wearables",
       "views_badge": "✨ 4M+ Views",
@@ -42,6 +44,7 @@
     {
       "item_number": "Item #3",
       "title": "AI Auto-Tracking 360° Phone Mount",
+      "image": "",
       "category": "tech",
       "category_label": "Creator Tech",
       "views_badge": "🎥 5M+ Views",
@@ -58,6 +61,7 @@
     {
       "item_number": "Item #4",
       "title": "PETLIBRO RFID Smart Pet Feeder",
+      "image": "",
       "category": "pet",
       "category_label": "Pet-Tech",
       "views_badge": "🐾 Viral Hit",
@@ -74,6 +78,7 @@
     {
       "item_number": "Item #5",
       "title": "Hall-Effect Rapid Trigger Keyboard",
+      "image": "",
       "category": "tech",
       "category_label": "Gaming / Tech",
       "views_badge": "⚡ Esports Standard",
@@ -90,6 +95,7 @@
     {
       "item_number": "Item #6",
       "title": "Medical-Grade Red Light LED Mask",
+      "image": "",
       "category": "wellness",
       "category_label": "Skincare",
       "views_badge": "🌟 800M+ Views",
@@ -106,6 +112,7 @@
     {
       "item_number": "Item #7",
       "title": "EcoFlow LiFePO4 Portable Power Station",
+      "image": "",
       "category": "smart-home",
       "category_label": "Power & Outdoor",
       "views_badge": "⚡ Long-Life LFP",
@@ -122,6 +129,7 @@
     {
       "item_number": "Item #8",
       "title": "Pneumatic Air Compression Leg Boots",
+      "image": "",
       "category": "wellness",
       "category_label": "Recovery",
       "views_badge": "💆 Daily Relief",
@@ -138,6 +146,7 @@
     {
       "item_number": "Item #9",
       "title": "Aqara U200 Matter Smart Lock",
+      "image": "",
       "category": "smart-home",
       "category_label": "Smart Home",
       "views_badge": "🔒 Matter Standard",
@@ -154,6 +163,7 @@
     {
       "item_number": "Item #10",
       "title": "Osteo Cervical Contour Memory Pillow",
+      "image": "",
       "category": "wellness",
       "category_label": "Better Sleep",
       "views_badge": "💤 Ergonomic",
